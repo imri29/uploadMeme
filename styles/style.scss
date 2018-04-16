@@ -1,0 +1,63 @@
+@import url(//fonts.googleapis.com/earlyaccess/opensanshebrew.css);
+@import "variables/_variables";
+@import "mixins/_mixins";
+@import "components/_form";
+@import "components/_spinner";
+@import "components/_modal";
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  background-color: $main-color;
+  font-family: $main-font;
+}
+
+body {
+  height: 100%;
+  margin-bottom: 0;
+}
+
+/** {
+  border: 1px solid gold;
+}*/
+
+.pic-wrapper {
+  margin-top: 50px;
+  text-align: center;
+  img {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+h1 {
+  color: $white;
+  margin: 20px 0;
+  font-weight: lighter;
+  font-size: 5vw;
+  //font-size: calc(3.5vw + 2vh + 1.5vmin);
+  @media (max-width: $mobile-size) {
+    & {
+      margin: 20px 20px;
+    }
+  }
+}
+
+button {
+  width: 26%;
+  height: 100px;
+  color: $main-color;
+  background-color: $white;
+  font-family: $main-font;
+  font-size: 32px;
+  @include box-shadow;
+}
+
+/* todo:
+fix the inputs inner-lining
+*/

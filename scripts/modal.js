@@ -1,14 +1,14 @@
 const modalController = {
-  success: () => {
-    modalBehavior($(".success"));
+  showSuccessModal: () => {
+    showModal($(".success"));
   },
 
-  failed: () => {
-    modalBehavior($(".failed"));
+  showFailedModal: () => {
+    showModal($(".failed"));
   }
 };
 
-function modalBehavior(status) {
+function showModal(status) {
   status.show();
   const modal = $(".modal");
 

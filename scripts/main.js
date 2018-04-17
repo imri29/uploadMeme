@@ -22,9 +22,9 @@ $(document).ready(function() {
       $.post(API_URL, formData, function() {
         submitButton.html("<span>שליחה</span>");
         if ((status = 200)) {
-          modalController.success();
+          modalController.showSuccessModal();
         } else {
-          modalController.failed();
+          modalController.showFailedModal();
         }
       });
     });

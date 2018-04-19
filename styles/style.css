@@ -5,11 +5,15 @@
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  width: 100%; }
+  width: 100%;
+  padding: 8px; }
   .inputs form {
     display: block;
     margin-top: 12px;
     margin-bottom: 25px; }
+    @media (max-width: 767px) {
+      .inputs form {
+        margin-bottom: 50px; } }
     .inputs form input {
       height: 56px;
       width: 65%;
@@ -19,11 +23,35 @@
       -webkit-border-radius: 10px;
       -moz-border-radius: 10px;
       border-radius: 10px; }
+      .inputs form input:focus {
+        outline: none !important;
+        border: 1px solid indianred;
+        box-shadow: 0 0 10px #719ece; }
+      @media (max-width: 767px) {
+        .inputs form input {
+          height: 40px;
+          width: 80%; } }
 
-input:focus {
-  outline: none !important;
-  border: 1px solid indianred;
-  box-shadow: 0 0 10px #719ece; }
+#file {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1; }
+
+#file + label {
+  font-size: 1.25em;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: #0097f1;
+  display: block;
+  cursor: pointer;
+  margin-top: 20px; }
+
+#file:focus + label,
+#file + label:hover {
+  color: black; }
 
 ::-webkit-input-placeholder {
   font-family: "Open Sans Hebrew", sans-serif; }
@@ -118,10 +146,18 @@ body {
 }*/
 .pic-wrapper {
   margin-top: 50px;
-  text-align: center; }
-  .pic-wrapper img {
-    width: 70px;
-    height: 70px; }
+  text-align: center;
+  /*@media (max-width: $mobile-size) {
+    margin: 10% auto;
+  }*/ }
+
+img {
+  max-width: 70px;
+  max-height: 70px; }
+  @media (max-width: 767px) {
+    img {
+      max-height: 60px;
+      max-width: 60px; } }
 
 h1 {
   color: #ffffff;
@@ -136,12 +172,18 @@ button {
   width: 26%;
   height: 100px;
   color: #0097f1;
+  padding: 8px;
   background-color: #ffffff;
   font-family: "Open Sans Hebrew", sans-serif;
   font-size: 32px;
   -webkit-box-shadow: 7px 7px 148px -14px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 7px 7px 148px -14px rgba(0, 0, 0, 0.75);
   box-shadow: 7px 7px 148px -14px rgba(0, 0, 0, 0.75); }
+  @media (max-width: 767px) {
+    button {
+      font-size: 24px;
+      width: 60%;
+      margin-top: 40px; } }
 
 /* todo:
 fix the inputs inner-lining
